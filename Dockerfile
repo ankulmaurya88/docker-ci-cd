@@ -12,5 +12,6 @@ RUN pip install --no-cache-dir -r requirements.txt
 COPY app/ ./app
 COPY tests/ ./tests
 
+ENV PYTHONPATH=/app
 # Run pytest as default command (CI check)
 CMD ["pytest", "--maxfail=1", "--disable-warnings", "-q"]
